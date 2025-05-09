@@ -1,10 +1,4 @@
-Absolutely! A `README.md` file is a great way to document your project. Here's a simple template for your backend subscription tracker:
 
----
-
-### `README.md` Template for **Subscription Tracker API**
-
-````markdown
 # Subscription Tracker API
 
 This is the backend API for the **Subscription Tracker** application. The API allows users to manage and track their subscriptions with functionality to check, subscribe, and unsubscribe from services.
@@ -131,7 +125,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 6. **Contributing**: Basic guide on how others can contribute.
 7. **License**: You can add the MIT license or another license based on your choice.
 
----
-
-Would you like any modifications to this or need help with a different section?
-```
