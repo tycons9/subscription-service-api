@@ -1,4 +1,5 @@
-const mongoose = require('mongoose'); 
+// subscription.model.js
+import mongoose from 'mongoose';
 
 const subscriptionsSchema = new mongoose.Schema({
   serviceName: {
@@ -19,7 +20,7 @@ const subscriptionsSchema = new mongoose.Schema({
     default: 'ETB',
   },
   frequency: {
-    type: String, 
+    type: String,
     enum: ['daily', 'weekly', 'monthly', 'yearly'],
   },
   category: {
@@ -45,14 +46,14 @@ const subscriptionsSchema = new mongoose.Schema({
       message: 'Renewal date must be after the start date',
     },
   },
-  user: { 
+  user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
     required: true,
     index: true,
   },
 }, {
-  timestamps: true 
+  timestamps: true,
 });
 
 // Auto-calculate renewalDate before saving, if not set
@@ -73,6 +74,5 @@ subscriptionsSchema.pre('save', function (next) {
   next();
 });
 
-
 const Subscription = mongoose.model('Subscription', subscriptionsSchema);
-module.exports = Subscription;
+export default Subscription;
